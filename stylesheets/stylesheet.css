@@ -77,7 +77,7 @@ h1.title {
 }
 
 .wrapper {
-  width: 675px;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -186,8 +186,8 @@ p.tagline {
   position: fixed;
   top: 0;
   left: 50%;
-  width: 693px;
-  margin-left: -352px;
+  width: 818px;
+  margin-left: -415px;
   background: #222;
   border: 5px solid #444;
   color: #fff;

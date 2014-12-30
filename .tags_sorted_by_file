@@ -1,0 +1,11 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+authors-and-contributors	index.html	/^<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"><\/span><\/a>Authors and Contributors<\/h3>$/;"	a
+designer-templates	index.html	/^<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"><\/span><\/a>Designer Templates<\/h3>$/;"	a
+rather-drive-stick	index.html	/^<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"><\/span><\/a>Rather Drive Stick?<\/h3>$/;"	a
+support-or-contact	index.html	/^<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"><\/span><\/a>Support or Contact<\/h3>$/;"	a
+welcome-to-github-pages	index.html	/^<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"><\/span><\/a>Welcome to GitHub Pages.<\/h3>$/;"	a
