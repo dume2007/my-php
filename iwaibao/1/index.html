@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="cn">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="Keywords" content="">
+	    <meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>安踏我是拳王，玩游戏，赢大奖</title>
+		<link rel="stylesheet" type="text/css" href="statics/css/index.css">
+        <link rel="shortcut icon" type="image/x-icon" href="statics/images/favicon.ico" />
+    </head>
+    <body>
+    	<div id="wrap">
+			<div class="content home">
+				<header class="top">
+					<a href="javascript:void(0)" id="btnLogin" class="btn btn-login">登录</a>
+				</header>
+
+				<section class="option show">
+					<div class="option-list">
+						<a href="game.html" id="btnPlay" class="btn btn-play">开始游戏</a>
+					</div>
+					<div class="option-list">
+						<a href="user.html" id="btnUser" class="btn btn-user">我的奖品</a>
+						<a href="card.html" id="btnCard" class="btn btn-card">抽奖</a>
+					</div>
+					<div class="option-swiper">
+						<div class="swiper">
+							<!-- 显示最新5的个中奖记录，小于5的话放几个默认的来骗用户咯 ﹁_﹁ -->
+							<p>恭喜<span class="winners">189****2523</span>获得<span class="trophy">100元店铺红包</span></p>
+							<p>恭喜<span class="winners">181****4888</span>获得<span class="trophy">10元店铺红包</span></p>
+							<p>恭喜<span class="winners">153****1234</span>获得<span class="trophy">安踏拉杆箱</span></p>
+							<p>恭喜<span class="winners">180****5343</span>获得<span class="trophy">20元店铺红包</span></p>
+							<p>恭喜<span class="winners">133****8866</span>获得<span class="trophy">邹市明T恤</span></p>
+						</div>
+					</div>
+				</section>
+
+
+				<section id="pop" class="pop">
+					<header class="pop-head">
+						<h3>登录</h3>
+						<a href="javascript:void(0);" id="btnClose" class="btn btn-close"><i class="icon icon-close"></i></a>
+					</header>
+					<form method="post" action="" class="box-form">
+                        <div class="filed mobile" id="mobile">
+							<div class="ipt">
+	                            <input id="mobileVal" class="input" name="mobile" value="" placeholder="请输入手机号" autocomplete="off">
+	                        </div>
+                        </div>
+                        <div class="filed password" id="password">
+                            <div class="ipt">
+                                <input id="passwordVal" type="password" class="input" name="password" placeholder="请输入密码">
+                            </div>
+                            <!-- <p class="error">账号不存在或者密码错误</p> -->
+                        </div>
+						<div class="submit">
+                            <input type="submit" class="btn btn-submit" value="登&nbsp;&nbsp;录">
+                        </div>
+                        <div class="filed filed-option">
+                            <a href="#" class="find-pwd">忘记密码</a>
+                            <a href="#" class="resign">免费注册</a>
+                        </div>
+					</form>
+				</section>
+
+
+				<div class="mask"></div>
+			</div>
+		</div>
+
+		<!-- 注册 -->
+		<script type="text/html" id="resige">
+			<section id="pop" class="pop">
+				<header class="pop-head">
+					<h3>注册</h3>
+					<a href="javascript:void(0);" id="btnClose" class="btn btn-close"><i class="icon icon-close"></i></a>
+				</header>
+				<form method="post" action="" class="box-form">
+                    <div class="filed mobile" id="mobile">
+						<div class="ipt">
+                            <input id="mobileVal" class="input" name="mobile" value="" placeholder="请输入手机号" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="filed password" id="password">
+                        <div class="ipt">
+                            <input id="passwordVal" type="password" class="input" name="password" placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <div class="filed password" id="password">
+                        <div class="ipt">
+                            <input id="passwordVal" type="password" class="input" name="password" placeholder="请再次输入密码">
+                        </div>
+                    </div>
+					<div class="submit">
+                        <input type="submit" class="btn btn-submit" value="注&nbsp;&nbsp;册">
+                    </div>
+                    <div class="filed filed-option">
+                        <a href="#" class="find-pwd">忘记密码</a>
+                        <a href="#" class="resign">直接登录</a>
+                    </div>
+				</form>
+			</section>
+		</script>
+
+		<!-- 找回密码 -->
+		<script type="text/html" id="findPwd">
+			<section id="pop" class="pop">
+				<header class="pop-head">
+					<h3>找回密码</h3>
+					<a href="javascript:void(0);" id="btnClose" class="btn btn-close"><i class="icon icon-close"></i></a>
+				</header>
+				<form method="post" action="" class="box-form">
+                    <div class="filed mobile" id="mobile">
+						<div class="ipt">
+                            <input id="mobileVal" class="input" name="mobile" value="" placeholder="请输入手机号" autocomplete="off">
+                            <a href="javascript:void(0)" class="get-code"><em>获取验证码</em></a>
+                            <!-- <a href="javascript:void(0)" class="get-code disabled"><em>59</em></a> -->
+                        </div>
+                    </div>
+                    <div class="filed phone-code" id="phoneCode">
+                        <div class="ipt">
+                            <input id="phoneCodeVal" type="text" class="input" name="phoneCode" placeholder="请输入验证码">
+                        </div>
+                        <!-- <p class="error">验证码错误</p> -->
+                    </div>
+                    <div class="filed password" id="password">
+                        <div class="ipt">
+                            <input id="passwordVal" type="password" class="input" name="password" placeholder="请输入密码">
+                        </div>
+                    </div>
+					<div class="submit">
+                        <input type="submit" class="btn btn-submit" value="注&nbsp;&nbsp;册">
+                    </div>
+                    <div class="filed filed-option">
+                        <a href="#" class="find-pwd">忘记密码</a>
+                        <a href="#" class="resign">直接登录</a>
+                    </div>
+				</form>
+			</section>
+		</script>
+		
+    	<script type="text/javascript" src="statics/js/jquery-2.1.0.min.js"></script>
+    	<script type="text/javascript">
+    		var swiper = $('.swiper'),
+    			text   = swiper.find('p:eq(0)').html(),
+    			content= $('.content'),
+    			btnLogin = $('#btnLogin'), // 登录按钮
+    			btnClose = $('#btnClose'), // 关闭弹窗按钮
+    			pop    = $('#pop'),  // 弹窗
+    			mask   = $('.mask'); // 遮罩
+
+
+    		// 打开弹窗
+    		function openPop() {
+    			pop.addClass('popIn');
+    			mask.addClass('popIn');
+    			isOpen = true;
+    		}
+
+    		// 关闭弹窗
+    		function closePop() {
+    			mask.removeClass('popIn');
+    			pop.removeClass('popIn');
+    		}
+
+    		// 获取第一条信息，插入.swiper底部，使动画流畅。
+    		swiper.append('<p>' + text + '</p>');
+
+    		btnLogin.bind('click',function(){
+    			openPop();
+    		});
+    		btnClose.bind('click',function(){
+    			closePop();
+    		})
+
+		</script>
+    </body>
+</html>

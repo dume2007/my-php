@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="cn">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="Keywords" content="">
+	    <meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>安踏我是拳王，玩游戏，赢大奖</title>
+		<link rel="stylesheet" type="text/css" href="statics/css/index.css">
+        <link rel="shortcut icon" type="image/x-icon" href="statics/images/favicon.ico" />
+    </head>
+    <body>
+    	<div id="wrap">
+			<header class="header">
+				<a href="javascript:history.go(-1)" class="btn btn-back"><i class="icon icon-back"></i></a>
+				<div class="title"><h2>幸运抽奖</h2></div>
+			</header>
+			<div class="content">
+                <!-- 刮刮卡 -->
+				<div class="canvas">
+					<canvas id="canvasCard"></canvas>
+					<p>剩余抽奖次数：<span class="num">1</span>次</p>
+				</div>
+
+				<section class="item">
+					<a href="card.html" class="btn btn-again">再抽一次</a>
+					<a href="index.html" class="btn btn-play">继续游戏</a>
+					<h4>抽奖说明：</h4>
+					<p>注册账号将赠送一次抽奖机会。</p>
+					<p>每次游戏结束后，登录后并分享到朋友圈可再获得一次抽奖机会。</p>
+					<p>分享到朋友圈后，将记录您的朋友通过您分享的链接点击进入游戏的次数，活动结束后点击次数排名靠前者将获得幸运大奖。</p>
+					<p>本次活动期间将送出：安踏京东旗舰店店铺红包10元、20元、30元，邹市明T恤100件，运动鞋30双，拉杆箱10个；</p>
+				</section>
+
+                <!-- 提示弹窗 -->
+				<section id="pop" class="pop">
+					<div class="win"></div>
+					<div class="box">
+						<p>恭喜您，获得10元店铺红包</p>
+						<div class="option">
+							<a href="user.html" class="btn btn-semi-left">查看奖品</a>
+							<a href="javascript:void(0)" class="btn btn-semi-right">微信分享</a>
+						</div>
+					</div>
+				</section>
+				<div id="mask" class="mask"></div>
+			</div>
+		</div>
+    	<script type="text/javascript" src="statics/js/jquery-2.1.0.min.js"></script>
+    	<script type="text/javascript" src="statics/js/mod/createCard.js"></script>
+    	<script type="text/javascript">
+    		var canvas = document.getElementById('canvasCard'),
+    			content= $('.content'),
+    			pop    = $('#pop'),  // 弹窗
+    			mask   = $('#mask'), // 遮罩
+    			win    = $('.win'),  // 
+    			imgURL = 'statics/images/card.png', // 刮刮卡背景图片
+    			isOpen = false,
+    			isWin  = false; // 是否中奖
+
+    		// 打开弹窗
+    		function openPop() {
+    			pop.addClass('popIn');
+    			mask.addClass('popIn');
+    			isOpen = true;
+    		}
+
+    		// 关闭弹窗
+    		function closePop() {
+    			mask.removeClass('popIn');
+    			pop.removeClass('popIn');
+    		}
+
+    		// 遮罩
+    		mask.bind('click', function(){
+    			closePop();
+    		});
+
+    		isWin  = true;
+    		// 中奖效果
+    		if (isWin) {
+    			pop.addClass('isWin');
+    		};
+    		win.bind('click', function(){
+    			closePop();
+    		});
+
+    		// 创建刮刮卡方法
+    		// 必须使用Element对象
+    		// imgURL 参数可以为 具体路径 或者 DataURIs 
+    		canvas.createCard(imgURL);
+    		
+		</script>
+    </body>
+</html>

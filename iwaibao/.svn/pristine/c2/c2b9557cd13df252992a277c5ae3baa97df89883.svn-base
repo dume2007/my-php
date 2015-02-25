@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Keywords" content="">
+    <meta name="description" content="" />
+    <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+    <!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" /> -->
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>安踏我是拳王，玩游戏，赢大奖</title>
+    <link rel="stylesheet" type="text/css" href="statics/css/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="statics/images/favicon.ico" />
+</head>
+<body style="padding:0; margin: 0; height: 100%; background: #000">
+    <div id="gameContent">
+      <canvas id="gameCanvas" width="320" height="480"></canvas>
+    </div>
+
+    
+    <script type="text/javascript" src="statics/js/cocos2d-js-v3.3-lite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="statics/js/src/config.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="statics/js/src/resource.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="statics/js/src/GamePlay/layer/ChooseHeadLayer.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="statics/js/src/GamePlay/layer/GameOverLayer.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="statics/js/src/GamePlay/sprite/BarSprite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="statics/js/src/GamePlay/GamePlay.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+      window.onload = function(){
+          //load resources
+          cc.game.onStart = function(){
+
+              GC.winSize = cc.director.getWinSize();
+              GC.w = GC.winSize.width;
+              GC.h = GC.winSize.height;
+              GC.w2 = GC.w / 2;
+              GC.h2 = GC.h / 2;
+              cc.LoaderScene.preload(g_resources, function () {
+                  cc.director.runScene(new GamePlayScene());
+              }, this);
+          };
+          cc.game.run("gameCanvas");
+      };
+
+      var gameCanvas = document.getElementById('gameCanvas'),
+          gameContent = document.getElementById('gameContent'),
+          width      = document.body.clientWidth,
+          height     = document.body.clientHeight;
+
+      gameCanvas.width   = width;
+      gameCanvas.height  = width * 1.5;
+
+    </script>
+</body>
+</html>
