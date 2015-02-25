@@ -1,0 +1,30 @@
+html,body{padding: 0; margin: 0;}
+#main{background-color: #363636; height: 65px; line-height: 65px; font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 黑体, Helvetica, Arial, Tahoma, sans-serif;}
+#main .head_box{color: #fff; margin: 0 30px;}
+#menu {border: none; padding-bottom: 12px;}
+#error{margin-top: 4px; color: red;font-size: 12px;}
+.wrap{display: table; width: 98%; margin: 10px;}
+.left{ 
+  width: 220px; font-size: 13px; display: table-cell; vertical-align: top; 
+  border: 1px solid #aaa;
+  background-color: #fff;
+  color: #222;
+}
+.right{display: table-cell; padding: 4px 20px 4px 30px;}
+.main-box{min-height: 300px;}
+.right h2{
+  border-left: 3px solid #ccc; padding: 0; margin: 0; 
+  padding-left: 6px; color:#615F5F; font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  height: 26px; line-height: 26px;
+}
+.right .list{min-height: 300px;}
+.buttons{margin:10px;}
+.table1{background-color: #ccc;}
+.table1 td{background-color: #fff; padding: 4px; font-size: 13px;}
+.table1 td .text{width:200px;}
+.table1 td .textarea{width: 300px; height: 100px;}
+.table1 td .submit{font-size: 16px;}
+tr.thead{background-color: #ccc; height: 25px; line-height: 25px;}
+.tbody tr{height: 23px; line-height: 23px;}
