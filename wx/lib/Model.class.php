@@ -34,7 +34,12 @@ class Model extends Db{
 
   public function getUserPrizeList()
   {
-    return $this->query("select * from user_prize up left join prize p on p.id=up.prize_id order by up.id desc");
+    $sql = "select up.*, p.title, u.mobile, u.username from user_prize up 
+            left join prize p on p.id=up.prize_id 
+            left join user u on u.id=up.user_id 
+            order by up.id desc";
+
+    return $this->query($sql);
   }
 
   public function getLottery($uid, $prizes)
